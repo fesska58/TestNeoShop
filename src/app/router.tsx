@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import CatalogPage from "../pages/CatalogPage/CatalogPage";
-import Basket from "../pages/BasketPage";
+import BasketPage from "../pages/BasketPage/BasketPage";
 
 export const router = createBrowserRouter([
   {
@@ -9,6 +9,6 @@ export const router = createBrowserRouter([
   },
   {
     path: "/cart",
-    element: <Basket />,
+    element: <BasketPage />,
   },
 ]);

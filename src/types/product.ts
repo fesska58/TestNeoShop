@@ -5,3 +5,9 @@ export interface Product {
   rate: number;
   image: string;
 }
+
+export interface ProductGroup {
+  id: number;
+  title: string;
+  products: Product[];
+}
