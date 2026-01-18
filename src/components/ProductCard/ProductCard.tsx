@@ -1,11 +1,18 @@
 import './productCard.css'
 import type { Product } from '../../types/product';
+import { addToCart } from '../../utils/carStorage';
 
 interface ProductCardProps {
   product: Product;
+  onAddToCart?: () => void;
 }
 
-export function ProductCard ({product}: ProductCardProps) {
+export function ProductCard ({product, onAddToCart}: ProductCardProps) {
+const handleBuy = () => {
+  addToCart(product)
+  onAddToCart?.()
+}
+
   return (
     <div className="product-card">
       <img
@@ -20,7 +27,7 @@ export function ProductCard ({product}: ProductCardProps) {
       </div>
       <div className="product-card__info">
         <span className="product-card__price">⭐{product.rate}</span>
-        <button className="product-card__buy">Купить</button>
+        <button className="product-card__buy" onClick={handleBuy}>Купить</button>
         </div>
       
     </div>

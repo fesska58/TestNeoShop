@@ -1,0 +1,22 @@
+.backet {
+  max-width: 1110px;
+  margin: 0 auto 40px;
+}
+
+.backet__title {
+  margin: 28px 0 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.backet__content {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 30px;
+}
+
+.backet__items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
