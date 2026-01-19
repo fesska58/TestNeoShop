@@ -1,5 +1,6 @@
 .page {
-  min-height: 100vh;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+    position: fixed;  
+    bottom: 0;  
+    left: 0;  
+    right: 0; 
 }

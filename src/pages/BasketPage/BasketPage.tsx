@@ -6,7 +6,7 @@ import { CartSummary } from "../../components/CartSummary/CartSummary"
 import { CartItems } from "../../components/CartItems/CartItems"
 import type { CartItem as CartItemType } from "../../types/cart";
 import './backet.css'
-//import '../../page.css'
+import '../../page.css'
 
 export default function BasketPage(){
   const [cart, setCart] = useState<CartItemType[]>([]);
@@ -23,7 +23,7 @@ export default function BasketPage(){
   const total = cart.reduce((sum, item) => sum + item.product.price * item.quantity, 0);
 
   return (
-    <div className="page">
+    <div>
       <Header likeCount={cart.length} cartCount={cart.length}/>
 
       <main className="backet">
@@ -61,7 +61,7 @@ export default function BasketPage(){
         </div>
       </main>
 
-      <Footer/>
+      <div className="page"><Footer/></div>
     </div>
   )
 }

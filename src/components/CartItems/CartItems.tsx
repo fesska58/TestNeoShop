@@ -1,4 +1,3 @@
-import type { Product } from "../../types/product";
 import type { CartItem as CartItemType } from "../../types/cart";
 import './cartItems.css'
 
@@ -29,9 +28,9 @@ export const CartItems = ({
             </div>
 
             <div className="cart-item__controls">
-                <button onClick={onDecrease}>−</button>
+                <button className="btn" onClick={onDecrease}>−</button>
                 <span>{item.quantity}</span>
-                <button onClick={onIncrease}>+</button>
+                <button className="btn" onClick={onIncrease}>+</button>
             </div>
 
             <button
